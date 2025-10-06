@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta Refrescante: Limonada Amazónica de Cocona</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Paleta 1 ACTIVA: Cocona & Ají Dulce */
+        :root {
+            --verde-hoja: #388E3C; /* Verde oscuro (Acentos, Botones) */
+            --naranja-fruta: #FF8A00; /* Naranja VIVO (Énfasis, Borde) */
+            --cacao-profundo: #3E2723; /* Texto principal */
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Fondo con patrón de hojas de palmera ampliado (Base64 SVG) */
+            background-color: #FAFAFA; 
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><path fill='%23E8F5E9' d='M50 50c-10 0-10 15 0 15s10-15 0-15z'/><path fill='%23E8F5E9' d='M45 40l-5 5-5-5z'/><path fill='%23E8F5E9' d='M55 40l5 5 5-5z'/></svg>");
+            background-repeat: repeat;
+            background-size: 250px; /* TAMAÑO DEL PATRÓN DE HOJA AUMENTADO 5 VECES */
+        }
+        .container-selva {
+            max-width: 600px; 
+            margin: auto;
+            padding: 1rem;
+        }
+        .card-tierra {
+            /* Fondo de la tarjeta: Naranja Pastel (Cocona) */
+            background-color: #FFF3E0; 
+            border-radius: 1.5rem;
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); 
+            padding: 1.5rem;
+            border: 3px solid var(--naranja-fruta); /* Borde Naranja VIVO */
+        }
+        h1 {
+            color: var(--cacao-profundo); 
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            /* Verde Hoja */
+            color: var(--verde-hoja); 
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            /* Borde Naranja VIVO */
+            border-bottom: 2px solid var(--naranja-fruta); 
+            padding-bottom: 0.25rem;
+        }
+        .pasos-lista li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #333;
+            list-style-type: none; 
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 2rem;
+        }
+        .pasos-lista li::before {
+            content: counter(step-counter) "."; 
+            font-weight: 800;
+            /* Color del número de paso: Naranja VIVO */
+            color: var(--naranja-fruta); 
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .tip-experto {
+            /* Fondo amarillo brillante */
+            background-color: #FFFDE7; 
+            /* Borde de acento: Verde Hoja */
+            border-left: 5px solid var(--verde-hoja); 
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+        }
+        .tip-experto span {
+            font-weight: 700;
+            /* Color de la estrella/tip: Naranja más oscuro */
+            color: #E65100; 
+        }
+        .cta-adicional {
+            display: block;
+            margin-top: 0.5rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-selva">
+        <div class="card-tierra">
+            
+            <h1 class="text-3xl sm:text-4xl text-center">
+                Refresco de Cocona: ¡La Limonada Amazónica! 🍹
+            </h1>
+            
+            <p class="text-center italic text-lg mt-3 mb-6 text-gray-600">
+                La Cocona es la fruta ácida esencial de la Amazonía. Aprende a convertir este tesoro de Puerto Maldonado en el refresco perfecto, que sorprende por su toque **ácido, dulce y ligeramente picante**.
+            </p>
+
+            <div class="my-6 p-4 border border-dashed border-gray-400 text-center rounded-lg bg-gray-50">
+                <p class="font-bold text-gray-700 mb-2">🎬 DEMOSTRACIÓN RÁPIDA: Corte Perfecto</p>
+                
+                <video 
+                    src="https://raw.githubusercontent.com/Danielaguedo/archivos-puestoselva/f74a6846956d9f814eba41ea72494441fc743521/productos/cocona/Cocona_corte.webm" 
+                    class="w-full h-auto rounded-lg" 
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline
+                ></video>
+                
+                <p class="text-sm text-gray-500 mt-2">
+                    *Consejo: El video muestra cómo obtener la pulpa para el jugo.*
+                </p>
+            </div>
+
+
+            <h2 class="text-xl sm:text-2xl">
+                Pasos para un Refresco Selva Pura (4 Pasos)
+            </h2>
+
+            <ol class="pasos-lista">
+                <li>
+                    <strong>🔪 1. Limpieza y Corte (Opcional Hervor):</strong> Lava bien 1 Cocona grande. **Tip:** Si deseas suavizar su sabor, puedes darle un hervor rápido de 1-2 minutos. Luego, córtala en cuatro partes, retira las pepas y corta la pulpa con cáscara en trozos grandes.
+                </li>
+                <li>
+                    <strong>🧊 2. Licuar Suavemente:</strong> Coloca la Cocona cortada en la licuadora con 1 taza de agua. Licúa solo por unos segundos (pulso), **sin excederte**, para evitar que la cáscara amargue el sabor.
+                </li>
+                <li>
+                    <strong>💧 3. Colar y Diluir:</strong> Cuela la mezcla para retirar restos de cáscara y semillas. Vierte el líquido concentrado en una jarra y añade 1 litro de agua fría.
+                </li>
+                <li>
+                    <strong>🍯 4. Endulzar y Servir:</strong> Endulza a tu gusto (azúcar, panela, o stevia). Sirve con mucho hielo. ¡Es ideal para acompañar comidas!
+                </li>
+            </ol>
+            
+            <div class="tip-experto">
+                <span>⭐ Tip del Experto: El Secreto del Sabor:</span> Para un toque especiado que potencia el dulzor natural, usa **agua de canela y clavo** (enfriada) en el paso 3 en lugar de agua simple. ¡Eleva tu refresco a otro nivel!
+            </div>
+            
+            <div class="mt-8">
+                <a 
+                    href="./cocona_recetas.html" 
+                    class="cta-adicional"
+                    style="background-color: var(--verde-hoja);"
+                >
+                    📚 Descubre Recetas Selva Pura (Ají, Helados...)
+                </a>
+                <a 
+                    href="./cocona_propiedades.html" 
+                    class="cta-adicional"
+                    style="background-color: var(--verde-hoja); margin-top: 1rem;"
+                >
+                    💚 Valores Nutricionales y Tips de Salud
+                </a>
+            </div>
+
+            <div class="text-center mt-6">
+                <a 
+                    href="https://wa.me/51999999999?text=Hola,%20tengo%20una%20pregunta%20sobre%20la%20cocona%20y%20el%20ají%20de%20cocona." 
+                    target="_blank" 
+                    class="inline-block px-8 py-3 text-white font-bold rounded-full text-lg shadow-xl transition duration-300 hover:opacity-90"
+                    style="background-color: var(--naranja-fruta);" 
+                >
+                    💬 ¡Pregúntame por el Ají de Cocona!
+                </a>
+            </div>
+
+            <p class="text-center mt-5 text-sm text-gray-500">
+                Encuentra este y otros productos frescos de la Amazonía en tu puesto de confianza.
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>
+```eof
